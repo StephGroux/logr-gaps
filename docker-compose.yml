@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  app:
+    environment:
+      - DISPLAY
+      - LOGFILE
+    build: app
+    volumes:
+      - ./app/src:/src
+      - ./app/logs:/logs
+      - /tmp/.X11-unix:/tmp/.X11-unix
